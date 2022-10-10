@@ -1,0 +1,43 @@
+.instagram {
+  display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 50px;
+}
+.instagram .photo {
+   height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.instagram .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.instagram .photo .info {
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+    width: 100%;
+    color: #FFFFFF;
+    height: 100%;
+}
+
+.instagram .photo .info span {
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: .2s ease-in;
+}
+
+.instagram .photo .info:hover span {
+
+    visibility: visible;
+    background-color: rgba(0,0,0,0.3);
+}

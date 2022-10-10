@@ -1,0 +1,35 @@
+.Logos {
+    display: flex;
+    margin: auto;
+    width: 60%;
+    justify-content: space-evenly;
+    justify-items: center;
+    position: relative;
+    box-sizing: border-box;
+
+
+}
+.Logos .logo {
+    padding: 10px;
+    margin-left: 40px;
+}
+
+.Logos .logo img{
+    width: 100%;
+    image-rendering: auto;
+    object-fit: cover;
+}
+@media (max-width: 900px){
+    .Logos {
+        width: 100%;
+    }
+}
+@media (max-width: 450px){
+    .Logos {
+        width:100%;
+    }
+    .Logos .logo {
+        padding: 0px;
+        margin-left: 5px;
+    }
+}

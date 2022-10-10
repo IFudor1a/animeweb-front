@@ -1,0 +1,144 @@
+.ProductForm {
+    display: flex;
+    flex-direction: column;
+  margin: 50px 0;
+    width: 40%;
+    gap: 10px;
+}
+.ProductForm h3 {
+    background-color: #FF5154;
+    border-radius: 15px;
+    width: 100px;
+    color: #FFFFFF;
+    padding: 6px 12px;
+}
+.ProductForm span {
+    display: block;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+.ProductForm p {
+    letter-spacing: 1px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+.ProductForm .Sizes {
+    display: flex;
+}
+.ProductForm .Sizes .Size {
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    margin: 4px;
+    font-size: 18px;
+    letter-spacing: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #181f24;
+    transition: 5ms;
+}
+.active {
+    background-color: #FF5154;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    margin: 4px;
+    font-size: 18px;
+    letter-spacing: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #FF5154;
+    transition: 5ms;
+    color: #FFFFFF;
+}
+.ProductForm .details {
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+
+}
+.ProductForm .counter {
+display: flex;
+}
+.ProductForm .counter .left_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   cursor: pointer;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    font-size: 24px;
+    width: 38px;
+    height: 38px;
+    border: 1px solid #181f24;
+    background-color: #FFFFFF;
+    padding: 10px 16px;
+    text-align: center;
+}
+.ProductForm .counter .right_button {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 38px;
+    height: 38px;
+    font-size: 24px;
+    border: 1px solid #181f24;
+    background-color: #FFFFFF;
+    padding: 10px 16px;
+}
+.ProductForm .counter input {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    text-align: right;
+    font-size: 12px;
+    width: 38px;
+    height: 38px;
+    background-color: #FFFFFF;
+    border: 1px solid #181f24;
+}
+.ProductForm .title {
+    font-size: 15px;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+.ProductForm .Purchase {
+    height: 38px;
+    border-radius: 15px;
+    margin-right: 100px;
+    width: 302px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 2px;
+    background-color: #FF5154;
+    color: #FFFFFF;
+    border: 1px solid #FF5154;
+    cursor: pointer;
+
+}
+@media (max-width: 450px) {
+    .ProductForm {
+        width: 100%;
+        padding: 20px;
+    }
+    .ProductForm .Purchase {
+        margin-right: 0;
+        margin-left: 20px;
+    }
+    .ProductForm .counter input {
+        text-align: center;
+    }
+}

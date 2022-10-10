@@ -1,8 +1,13 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Spiegel, "Arial Narrow", Arial, sans-serif;
+}
+body {
+  background-color: #FFFFFF;
+  margin: 0;
+  font-family: Spiegel, "Arial Narrow", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +15,38 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.productsPage {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0;
+  padding: 20px;
+}
+.productsPage .Row{
+  display: block;
+}
+.Auth {
+  display: flex;
+  box-sizing: border-box;
+  height: 90vh;
+}
+.Product {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 90%;
+}
+.Product .Container {
+  display: flex;
+}
+.Cart {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 90vh;
+}
+@media (max-width: 450px) {
+  .Product .Container {
+    flex-direction: column;
+  }
 }

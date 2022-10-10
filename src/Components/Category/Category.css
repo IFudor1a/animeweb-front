@@ -1,0 +1,31 @@
+.Category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    margin: 50px 0;
+    padding: 10px;
+}
+
+.Category .Filters select, .Category .Categories select{
+    padding: 6px 12px;
+    border: none;
+    border-bottom: 1px solid #181f24;
+    letter-spacing: 2px;
+    cursor: pointer;
+    outline: none;
+    background-color: #FFFFFF;
+}
+
+.Category .Results {
+   font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 16px;
+}
+
+@media (max-width: 450px) {
+    .Category {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
