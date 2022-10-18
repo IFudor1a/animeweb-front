@@ -33,7 +33,7 @@ const Header = ({user}) => {
                     <Link to='/login'>{user ? user: 'Account'}</Link>
                     <div className='dropdown_content'>
                         <Link to='/cart'>Cart</Link>
-                        {user? <a /*onClick={() => store.logout()}*/>Log out</a> : <Link to='/login'>{user ? user: 'Account'}</Link>}
+                        {user? <a >Log out</a> : <Link to='/login'>{user ? user: 'Account'}</Link>}
                     </div>
                 </li>
                 <li onClick={() => handleClick()}>
@@ -44,7 +44,7 @@ const Header = ({user}) => {
             <div className={state.class}>
                 <Link to='/'>Home</Link>
                 <Link to='/products'>Products</Link>
-                <Link to='/login' /*onClick={() => store.logout()}*/>{user ? user: 'Account'}</Link>
+                <Link to='/login' >{user ? user: 'Account'}</Link>
             </div>
         </div>
     );

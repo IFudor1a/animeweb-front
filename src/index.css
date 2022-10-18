@@ -45,6 +45,13 @@ code {
   box-sizing: border-box;
   height: 90vh;
 }
+
+.AdminPage {
+   display: flex;
+  height: 75vh;
+  margin: 50px 0;
+  flex-direction: column;
+}
 @media (max-width: 450px) {
   .Product .Container {
     flex-direction: column;

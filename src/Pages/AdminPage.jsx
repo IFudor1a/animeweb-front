@@ -1,9 +1,10 @@
 import React from 'react';
+import AdminProductForm from "../Components/AdminProductForm/AdminProductForm";
 
 const AdminPage = () => {
     return (
-        <div>
-
+        <div className='AdminPage'>
+          <AdminProductForm/>
         </div>
     );
 };
