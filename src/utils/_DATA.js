@@ -84,12 +84,9 @@ let products = {
     }
 }
 
-export function _getProducts () {
-    return new Promise((res, rej) => {
-        setTimeout(() => res({...products}), 1000)
-    })
-}
-
-function generateUID () {
-    return Math.random().toString(36).substring(2,15) + Math.random().toString(36).substring(2,15)
+export async function _getProducts() {
+    const options = {
+        method: 'GET'
+    }
+    return await fetch('http://localhost:5000/api/product', options)
 }

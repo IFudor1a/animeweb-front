@@ -1,7 +1,7 @@
 import React, {createContext} from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import './Styles/index.css';
+import App from './Components/App';
 import reducer from './Reducers';
 import middleware from './Middlewares';
 import {Provider} from 'react-redux';

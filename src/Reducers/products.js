@@ -7,14 +7,17 @@ export default function products (state = {}, action) {
                 ...state,
                 [action.product.id]: action.product
             }
+
         case DELETE_PRODUCT:
             state.filter(el => el.id !== action.id)
             return {...state}
+
         case GET_PRODUCTS:
             return {
                 ...state,
-                ...action.products
+                ...action.product
             }
+
         default:
             return state;
     }

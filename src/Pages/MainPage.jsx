@@ -1,10 +1,10 @@
 import React from 'react';
-import Slider from "../Components/Slider/Slider";
-import ProductSlider from "../Components/ProductSlider/ProductSlider";
-import Logos from "../Components/Logos/Logos";
-import Gallary from "../Components/Gallary/Gallary";
-import Instagram from "../Components/Instagram/Instagram";
-import Button from "../Components/Buttons/Button";
+import Slider from "../Components/Slider";
+import ProductSlider from "../Components/ProductSlider";
+import Logos from "../Components/Logos";
+import Gallary from "../Components/Gallary";
+import Instagram from "../Components/Instagram";
+import Button from "../Components/Button";
 
 const MainPage = () => {
     return (

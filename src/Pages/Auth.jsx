@@ -1,6 +1,6 @@
 import React from 'react';
-import LoginForm from "../Components/LoginForm/LoginForm";
-import AuthImage from "../Components/AuthImage/AuthImage";
+import LoginForm from "../Components/LoginForm";
+import AuthImage from "../Components/AuthImage";
 
 const Auth = () => {
     return (

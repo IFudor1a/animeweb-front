@@ -1,6 +1,6 @@
 import React from 'react';
-import CartList from "../Components/CartList/CartList";
-import CartDetails from "../Components/CartDetails/CartDetails";
+import CartList from "../Components/CartList";
+import CartDetails from "../Components/CartDetails";
 
 const BasketPage = () => {
     return (
