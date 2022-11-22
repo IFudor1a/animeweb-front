@@ -3,15 +3,14 @@ import '../Styles/ProductDetails.css';
 import {LeftArrow, RightArrow} from "../Materials/SVG/SVG";
 
 const ProductDetails = ({product}) => {
-    const [current, setCurrent] = useState(1);
-    const slidesArray = [product.photo1, product.photo2,product.photo3,product.photo4]
-    console.log(product)
-    console.log(slidesArray)
+    const [current, setCurrent] = useState(0);
+    const slidesArray = product.product_images.split(' ').filter((el) => {return el !== ''})
+    console.log('Slides arrays', slidesArray)
     const handleClick = (direction) => {
         if(direction === 'right') {
-            current < slidesArray.length ? setCurrent(current + 1): setCurrent(1)
+            current < slidesArray.length - 1 ? setCurrent(current + 1): setCurrent(0)
         } else {
-            current <= 1? setCurrent(slidesArray.length): setCurrent(current - 1)
+            current <= 0? setCurrent(slidesArray.length - 1): setCurrent(current - 1)
         }
     }
 

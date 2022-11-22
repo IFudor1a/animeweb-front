@@ -13,11 +13,10 @@ const Products = ({Clothes}) => {
                 Object.values(Clothes).map(item => (
                     <div key={item.id} className='product'>
                         <Link to={`/products/${item._id}`}>
-                        <img src={`http://localhost:5000/${item.photo1}`} alt={item.name}/>
+                        <img src={`http://localhost:5000/${item.product_images.split(' ')[0]}`} alt={item.product_name}/>
                         <div className='productDetail'>
-                            {`http://localhost:5000/${item.photo1}`}
-                            <a href="#">{item.name}</a>
-                            <a href='#'>₸{item.price}</a>
+                            <a href="#">{item.product_name}</a>
+                            <a href='#'>₸{item.unit_price}</a>
                         </div>
                         </Link>
                     </div>

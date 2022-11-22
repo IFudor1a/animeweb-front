@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import {useEffect} from "react";
 import {handleInitialData} from "../Actions/products";
 import {useDispatch} from "react-redux";
+import {getProducts} from "../https/product-https";
 function App() {
 
     const dispatch = useDispatch()

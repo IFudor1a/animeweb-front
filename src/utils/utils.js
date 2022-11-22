@@ -2,20 +2,30 @@ export function generateUID () {
     return Math.random().toString(36).substring(2,15) + Math.random().toString(36).substring(2,15)
 }
 
-export const productFormer = (name, description, consists, price, size, photo, photo2, photo3,photo4 ) => {
+export const productFormer = (name, description, consists, price, photos) => {
     const formData = new FormData()
     formData.append('name',name)
     formData.append('description',description)
     formData.append('consists',consists)
     formData.append('price',price)
-    formData.append('size', size)
-    formData.append('photo1', photo)
-    formData.append('photo2', photo2)
-    formData.append('photo3', photo3)
-    formData.append('photo4', photo4)
-    return formData
+    for (let i = 0; i < photos.length; i++) {
+        console.log(photos[i])
+        formData.append(`photo${i}`, photos[i])
+
+    }
+    return formData;
 }
 
+export const checkSumFile = (files) => {
+   const allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif|\.jfif)$/i;
+    for (const file of files) {
+        console.log(file.type)
+        if (!allowedExtensions.exec(file.name)) {
+            return false
+        }
+    }
+    return true;
+}
 export const saveProduct = async (product) => {
     console.log('This is ', product)
     const options = {

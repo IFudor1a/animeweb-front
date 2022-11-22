@@ -15,11 +15,11 @@ const ProductForm = ({product}) => {
     }
     return (
         <div className='ProductForm'>
-            <h3>{product.price} ₸</h3>
+            <h3>{product.unit_price} ₸</h3>
             <span>Тонкая. Легкая. Белая.</span>
             <p>{product.description}</p>
             <span>Ткань сорта пенье</span>
-            <span>{product.consists}</span>
+            <span>{product.product_consists}</span>
             <div className='title'>Выберите размер:</div>
             <div className='Sizes'>
                 {sizes.map(size => (
