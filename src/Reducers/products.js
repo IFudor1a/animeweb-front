@@ -1,6 +1,6 @@
-import {ADD_PRODUCT, DELETE_PRODUCT, GET_PRODUCTS, ADD_TO_BASKET} from "../Actions/products";
+import {ADD_PRODUCT, DELETE_PRODUCT, GET_PRODUCTS} from "../Actions/products";
 
-export default function products (state = {}, action) {
+export default function products(state = {}, action) {
     switch (action.type) {
         case ADD_PRODUCT:
             return {

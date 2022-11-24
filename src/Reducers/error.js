@@ -1,6 +1,6 @@
 import {ERROR_PRODUCT} from "../Actions/products";
 
-export default function errors (state = {}, action) {
+export default function errors(state = {}, action) {
     switch (action.type) {
         case ERROR_PRODUCT:
             return {

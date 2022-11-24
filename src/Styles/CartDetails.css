@@ -9,6 +9,7 @@
     border-radius: 15px;
     padding: 10px;
 }
+
 .CartDetails h3 {
     letter-spacing: 2px;
     font-weight: 700;
@@ -16,6 +17,7 @@
     text-align: center;
 
 }
+
 .CartDetails p {
     display: flex;
     justify-content: center;
@@ -27,6 +29,7 @@
     font-size: 24px;
     text-align: center;
 }
+
 .CartDetails .Purchase {
     height: 38px;
     border-radius: 15px;

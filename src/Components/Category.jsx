@@ -2,7 +2,7 @@ import React from 'react';
 import '../Styles/Category.css';
 
 const categories = [
-    {id: 1, value:'HOODIE', name: 'HOODIE'},
+    {id: 1, value: 'HOODIE', name: 'HOODIE'},
     {id: 2, value: 'SVITSHOT', name: 'SVITSHOT'},
     {id: 3, value: 'T-SHIRTS', name: 'T-SHIRTS'},
     {id: 4, value: "SHIRTS", name: "SHIRTS"}
@@ -17,13 +17,13 @@ const filters = [
 const Category = ({Clothes}) => {
     return (
         <div className='Category'>
-          <div className='Categories'>
-            <select name='categories' >
-                <option key = '0' value="" disabled selected hidden>CATEGORIES</option>
-                {categories && categories.map(category => (
-                    <option key = {category.id} value={category.value}>{category.name}</option>
-                ))}
-            </select>
+            <div className='Categories'>
+                <select name='categories'>
+                    <option key='0' value="" disabled selected hidden>CATEGORIES</option>
+                    {categories && categories.map(category => (
+                        <option key={category.id} value={category.value}>{category.name}</option>
+                    ))}
+                </select>
             </div>
             <div className='Filters'>
                 <select name='filters'>
@@ -33,7 +33,7 @@ const Category = ({Clothes}) => {
                     ))}
                 </select>
             </div>
-            <div className='Results'> {Object.values(Clothes).length} Results </div>
+            <div className='Results'> {Object.values(Clothes).length} Results</div>
         </div>
     );
 };

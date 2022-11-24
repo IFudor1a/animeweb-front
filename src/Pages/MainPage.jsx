@@ -9,14 +9,14 @@ import Button from "../Components/Button";
 const MainPage = () => {
     return (
         <div>
-<Slider/>
+            <Slider/>
             <ProductSlider title='NEW ARRIVALS'/>
             <ProductSlider title='BEST SELLERS'/>
             <Logos/>
             <Gallary/>
             <ProductSlider title='LAST CHANCE'/>
             <Instagram/>
-            <Button/>
+            <Button link={'/products'} name={'VIEW ALL PRODUCTS'}/>
         </div>
     );
 };

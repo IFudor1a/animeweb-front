@@ -1,10 +1,10 @@
 .Footer {
+    margin-top: auto;
     display: flex;
-    margin: auto;
     border-top: 1px solid #FF5154;
     justify-content: center;
     padding: 20px;
-    background-color:#FF5154;
+    background-color: #FF5154;
     align-items: center;
     letter-spacing: 2px;
     height: 55px;

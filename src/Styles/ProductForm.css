@@ -1,10 +1,11 @@
 .ProductForm {
     display: flex;
     flex-direction: column;
-  margin: 50px 0;
+    margin: 50px 0;
     width: 40%;
     gap: 10px;
 }
+
 .ProductForm h3 {
     background-color: #FF5154;
     border-radius: 15px;
@@ -12,11 +13,13 @@
     color: #FFFFFF;
     padding: 6px 12px;
 }
+
 .ProductForm span {
     display: block;
     letter-spacing: 2px;
     font-weight: 700;
 }
+
 .ProductForm p {
     letter-spacing: 1px;
     text-align: left;
@@ -24,9 +27,11 @@
     font-weight: 500;
     line-height: 1.2;
 }
+
 .ProductForm .Sizes {
     display: flex;
 }
+
 .ProductForm .Sizes .Size {
     background-color: #FFFFFF;
     border-radius: 50%;
@@ -42,6 +47,7 @@
     border: 1px solid #181f24;
     transition: 5ms;
 }
+
 .active {
     background-color: #FF5154;
     border-radius: 50%;
@@ -58,20 +64,23 @@
     transition: 5ms;
     color: #FFFFFF;
 }
+
 .ProductForm .details {
     display: flex;
     justify-content: space-between;
     justify-items: center;
 
 }
+
 .ProductForm .counter {
-display: flex;
+    display: flex;
 }
+
 .ProductForm .counter .left_button {
     display: flex;
     justify-content: center;
     align-items: center;
-   cursor: pointer;
+    cursor: pointer;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     font-size: 24px;
@@ -82,6 +91,7 @@ display: flex;
     padding: 10px 16px;
     text-align: center;
 }
+
 .ProductForm .counter .right_button {
     display: flex;
     text-align: center;
@@ -97,6 +107,7 @@ display: flex;
     background-color: #FFFFFF;
     padding: 10px 16px;
 }
+
 .ProductForm .counter input {
     display: flex;
     justify-content: right;
@@ -108,12 +119,14 @@ display: flex;
     background-color: #FFFFFF;
     border: 1px solid #181f24;
 }
+
 .ProductForm .title {
     font-size: 15px;
     line-height: 1.5;
     letter-spacing: 2px;
     font-weight: 300;
 }
+
 .ProductForm .Purchase {
     height: 38px;
     border-radius: 15px;
@@ -129,15 +142,18 @@ display: flex;
     cursor: pointer;
 
 }
+
 @media (max-width: 450px) {
     .ProductForm {
         width: 100%;
         padding: 20px;
     }
+
     .ProductForm .Purchase {
         margin-right: 0;
         margin-left: 20px;
     }
+
     .ProductForm .counter input {
         text-align: center;
     }

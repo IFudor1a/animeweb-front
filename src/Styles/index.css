@@ -1,59 +1,63 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Spiegel, "Arial Narrow", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Spiegel, "Arial Narrow", Arial, sans-serif;
 }
+
 body {
-  background-color: #FFFFFF;
-  margin: 0;
-  font-family: Spiegel, "Arial Narrow", Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    background-color: #FFFFFF;
+    margin: 0;
+    font-family: Spiegel, "Arial Narrow", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 .productsPage {
-  display: flex;
-  flex-direction: column;
-  margin: 50px 0;
-  padding: 20px;
-}
-.productsPage .Row{
-  display: block;
-}
-.Auth {
-  display: flex;
-  box-sizing: border-box;
-  height: 90vh;
-}
-.Product {
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  height: 90%;
-}
-.Product .Container {
-  display: flex;
-}
-.Cart {
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  height: 90vh;
+    display: flex;
+    min-height: 75vh;
+    flex-direction: column;
+    margin: 50px 0;
+    padding: 20px;
 }
 
-.AdminPage {
-   display: flex;
-  height: 75vh;
-  margin: 50px 0;
-  flex-direction: column;
+.productsPage .Row {
+    display: block;
 }
-@media (max-width: 450px) {
-  .Product .Container {
+
+.Auth {
+    display: flex;
+    min-height: 90vh;
+    box-sizing: border-box;
+}
+
+.Product {
+    display: flex;
+    min-height: 75vh;
     flex-direction: column;
-  }
+    box-sizing: border-box;
+    height: 90%;
+}
+
+.Product .Container {
+    display: flex;
+}
+
+.Cart {
+    display: flex;
+    min-height: 75vh;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 90vh;
+}
+
+@media (max-width: 450px) {
+    .Product .Container {
+        flex-direction: column;
+    }
 }

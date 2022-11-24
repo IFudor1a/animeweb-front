@@ -1,5 +1,6 @@
 import React from 'react';
 import '../Styles/Logos.css';
+
 const LogoItems = [
     {
         id: 1,

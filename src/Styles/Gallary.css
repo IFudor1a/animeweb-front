@@ -4,19 +4,22 @@
     margin-bottom: 50px;
 
 }
+
 .Gallary .item {
     display: block;
-     height: 600px;
-     width: 100%;
+    height: 600px;
+    width: 100%;
 }
+
 .Gallary .item img {
     width: 100%;
     height: 100%;
     image-rendering: auto;
     image-resolution: from-image;
-     image-orientation: from-image;
-    object-fit:cover;
+    image-orientation: from-image;
+    object-fit: cover;
 }
+
 .Gallary .item .info {
     position: relative;
     display: block;
@@ -24,6 +27,7 @@
     width: 100%;
     padding: 20px;
 }
+
 .Gallary .item .info h3 {
     color: #FFFFFF;
     padding: 5px;
@@ -31,6 +35,7 @@
     border: 1px solid #FF5154;
     margin-bottom: 5px;
 }
+
 .Gallary .item .info a {
     color: white;
     letter-spacing: 1px;
@@ -38,6 +43,7 @@
     text-decoration: none;
     border-bottom: 1px solid #FFFFFF;
 }
+
 .Gallary .item .info a:hover {
     color: white;
     letter-spacing: 1px;
@@ -50,6 +56,7 @@
     animation-duration: 1s;
     animation-iteration-count: infinite;
 }
+
 @keyframes BorderAnim {
     25% {
         border-left: 1px solid #FFFFFF;
@@ -64,23 +71,27 @@
         border-bottom: 1px solid #FF5154;
     }
 }
+
 @media (max-width: 900px) {
     .Gallary {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
 @media (max-width: 600px) {
     .Gallary {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
 @media (max-width: 400px) {
     .Gallary {
         grid-template-columns: repeat(1, 1fr);
         margin: 0px 10px;
         margin-bottom: 50px;
     }
+
     .Gallary .item {
-      margin: 10px 0;
+        margin: 10px 0;
     }
 }

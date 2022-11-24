@@ -1,7 +1,8 @@
 .Search {
-   display: flex;
+    display: flex;
     justify-content: center;
 }
+
 .Search input {
     width: 25%;
     padding: 5px;
@@ -9,6 +10,7 @@
     border-radius: 12px;
     letter-spacing: 2px;
 }
+
 .Search button {
     border: 1px solid #EB5E55;
     background-color: #EB5E55;
@@ -20,19 +22,23 @@
     cursor: pointer;
     letter-spacing: 1px;
 }
-.Search button:hover{
+
+.Search button:hover {
     border: 1px solid #FFFFFF;
 }
+
 @media (max-width: 900px) {
     .Search input {
         width: 50%;
     }
 }
+
 @media (max-width: 600px) {
     .Search input {
         width: 75%;
     }
 }
+
 @media (max-width: 400px) {
     .Search input {
         width: 100%;

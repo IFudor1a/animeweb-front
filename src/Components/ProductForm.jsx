@@ -10,7 +10,7 @@ const ProductForm = ({product}) => {
     const handleClick = (e) => {
         e.preventDefault();
         let current = document.querySelector('.active');
-        if(current) current.className = 'Size';
+        if (current) current.className = 'Size';
         e.currentTarget.className = 'active';
     }
     return (
@@ -23,7 +23,8 @@ const ProductForm = ({product}) => {
             <div className='title'>Выберите размер:</div>
             <div className='Sizes'>
                 {sizes.map(size => (
-                    <button type='button' key={size.id} className='Size' onClick={(e) => handleClick(e)}>{size.size}</button>
+                    <button type='button' key={size.id} className='Size'
+                            onClick={(e) => handleClick(e)}>{size.size}</button>
                 ))}
             </div>
             <div className='title'>Количество:</div>

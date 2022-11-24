@@ -7,7 +7,7 @@
     padding: 10px;
 }
 
-.Category .Filters select, .Category .Categories select{
+.Category .Filters select, .Category .Categories select {
     padding: 6px 12px;
     border: none;
     border-bottom: 1px solid #181f24;
@@ -18,7 +18,7 @@
 }
 
 .Category .Results {
-   font-weight: 500;
+    font-weight: 500;
     letter-spacing: 2px;
     font-size: 16px;
 }

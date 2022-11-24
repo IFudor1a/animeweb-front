@@ -7,14 +7,14 @@ const AppRouter = () => {
     const [State, setState] = useState(true)
     return (
         <Routes>
-        { State && authRoutes.map(route =>
-            (<Route path={route.path} element={route.element}/>)
-        )}
-        {
-            publicRoutes && publicRoutes.map(route => (
-                <Route path={route.path} element={route.element}/>
-            ))
-        }
+            {State && authRoutes.map(route =>
+                (<Route path={route.path} element={route.element}/>)
+            )}
+            {
+                publicRoutes && publicRoutes.map(route => (
+                    <Route path={route.path} element={route.element}/>
+                ))
+            }
         </Routes>
     );
 };

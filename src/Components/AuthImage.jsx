@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Styles/AuthImage.css';
+import '../Styles/AuthPage.scss';
 
 const AuthImage = () => {
     return (

@@ -1,4 +1,4 @@
-import {$host, $authHost} from "./index";
+import {$host} from "./index";
 
 export const getProducts = async () => {
     const {data} = await $host.get('/product/')

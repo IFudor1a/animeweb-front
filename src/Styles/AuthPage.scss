@@ -1,0 +1,77 @@
+.AuthPage {
+  display: flex;
+  min-height: 90vh;
+  box-sizing: border-box;
+
+  .AuthImage {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://images3.alphacoders.com/135/thumb-1920-135625.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: local;
+    background-size: cover;
+    @media (max-width: 450px) {
+      .AuthImage {
+        display: none;
+      }
+    }
+  }
+
+  .Login {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    @media (max-width: 450px) {
+      .Login {
+        width: 100%;
+      }
+      .Login input {
+        width: 70%;
+      }
+      .Login button {
+        width: 70%;
+      }
+    }
+
+    input {
+      padding: 12px 24px;
+      width: 40%;
+      letter-spacing: 2px;
+      font-weight: 600;
+    }
+
+    h3 {
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    button {
+      background-color: #FF5154;
+      padding: 12px 24px;
+      border: 1px solid #FF5154;
+      width: 40%;
+      color: #FFFFFF;
+      letter-spacing: 2px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.5s;
+
+      &:hover {
+        background-color: #EB5E55;
+      }
+    }
+
+    a {
+      cursor: pointer;
+      letter-spacing: 1px;
+    }
+
+  }
+
+}

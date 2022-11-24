@@ -70,7 +70,7 @@ let products = {
         img: "https://cdn.shopify.com/s/files/1/0070/1700/5113/products/TSM197NDMN_900x.png?v=1658955040",
         price: "16500",
         currency: "KZT"
-    },"2mb6re13q842wu8n106bhk": {
+    }, "2mb6re13q842wu8n106bhk": {
         id: "2mb6re13q842wu8n106bhk",
         name: "I AM DORAEMON WHITE TEE",
         category: "HOODIE",
