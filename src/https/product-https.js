@@ -1,11 +1,11 @@
 import {$host} from "./index";
 
-export const getProducts = async () => {
+export const _getProducts = async () => {
     const {data} = await $host.get('/product/')
     return data
 }
 
-export const postProduct = async (product) => {
+export const _postProduct = async (product) => {
     const headers = {
         'Content-Type': 'multipart/form-data'
     }

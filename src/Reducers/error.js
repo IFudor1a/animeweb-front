@@ -1,4 +1,5 @@
 import {ERROR_PRODUCT} from "../Actions/products";
+import {ERROR_BRAND} from "../Actions/brand";
 
 export default function errors(state = {}, action) {
     switch (action.type) {
@@ -6,6 +7,11 @@ export default function errors(state = {}, action) {
             return {
                 ...state,
                 product_error: ERROR_PRODUCT
+            }
+        case ERROR_BRAND:
+            return  {
+                ...state,
+                brand_error: ERROR_BRAND
             }
 
         default:

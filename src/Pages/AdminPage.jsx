@@ -7,7 +7,6 @@ const AdminPage = () => {
     return (
         <div className='AdminPage'>
             <AdminPageLabel/>
-            <AdminProductForm/>
         </div>
     );
 };

@@ -7,7 +7,7 @@ const ProductDetails = ({product}) => {
     const slidesArray = product.product_images.split(' ').filter((el) => {
         return el !== ''
     })
-    console.log('Slides arrays', slidesArray)
+
     const handleClick = (direction) => {
         if (direction === 'right') {
             current < slidesArray.length - 1 ? setCurrent(current + 1) : setCurrent(0)

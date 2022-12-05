@@ -38,7 +38,7 @@
     margin: auto;
     z-index: 2;
     align-items: center;
-    overflow-x: hidden;
+    overflow: hidden;
     margin-bottom: 50px;
 }
 

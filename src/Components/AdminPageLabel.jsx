@@ -1,29 +1,41 @@
 import React from 'react';
 import '../Styles/AdminPage.scss';
+import {Link} from "react-router-dom";
 
 const choices = [
     {
         id: 1,
-        name: "Product"
+        name: "Product",
+        link: '/admin/product'
     },
     {
         id: 2,
-        name: "Brand"
+        name: "Brand",
+        link: '/admin/brand'
     },
     {
         id: 3,
-        name: "Category"
+        name: "Category",
+        link: '/admin/category'
     },
     {
         id: 4,
-        name: "Customer"
+        name: "Customer",
+        link: '/admin/customer'
+    },
+    {
+        id: 5,
+        name: "Role",
+        link: '/admin/role'
     }
 ]
 const ChoiceLabel = ({choice}) => {
     return (
-        <div className='Label'>
+        <Link to={choice.link} className='Label'>
+        <div>
             <div>{choice.name}</div>
         </div>
+        </Link>
     )
 }
 

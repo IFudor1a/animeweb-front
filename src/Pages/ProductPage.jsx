@@ -3,16 +3,16 @@ import ProductDetails from "../Components/ProductDetails";
 import ProductForm from "../Components/ProductForm";
 import {useDispatch, useSelector} from "react-redux";
 import {useParams} from 'react-router-dom';
-import {handleInitialData} from "../Actions/products";
+import {handleInitialData} from "../Actions/shared";
 
 const ProductPage = () => {
     const params = useParams();
     const dispatch = useDispatch()
-    useEffect(() => {
-        dispatch(handleInitialData())
-    }, [])
+
     const products = useSelector((state) => state.products)
+    if (products.length === 0) dispatch(handleInitialData)
     const product = Object.values(products).filter(product => product._id === params.id)
+
     return (
         <div className='Product'>
             {product[0] &&

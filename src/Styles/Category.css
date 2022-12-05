@@ -1,4 +1,4 @@
-.Category {
+.CategoryLabel {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -7,7 +7,7 @@
     padding: 10px;
 }
 
-.Category .Filters select, .Category .Categories select {
+.CategoryLabel .Filters select, .CategoryLabel .Categories select {
     padding: 6px 12px;
     border: none;
     border-bottom: 1px solid #181f24;
@@ -17,7 +17,7 @@
     background-color: #FFFFFF;
 }
 
-.Category .Results {
+.CategoryLabel .Results {
     font-weight: 500;
     letter-spacing: 2px;
     font-size: 16px;

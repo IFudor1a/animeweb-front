@@ -1,3 +1,7 @@
+import {_getProducts} from "../https/product-https";
+import {_getBrands} from "../https/brand-https";
+import {_getCategory} from "../https/category-https";
+
 let products = {
     "8xf0y6ziyjabvozdd253nd": {
         id: "8xf0y6ziyjabvozdd253nd",
@@ -84,9 +88,21 @@ let products = {
     }
 }
 
-export async function _getProducts() {
+/*export async function _getProducts() {
     const options = {
         method: 'GET'
     }
     return await fetch('http://localhost:5000/api/product', options)
+}*/
+
+export const getInitialData = () => {
+    return Promise.all([
+        _getProducts(),
+        _getBrands(),
+        _getCategory()
+    ]).then(([products, brands, categories]) => ({
+        products,
+        categories,
+        brands
+    }))
 }

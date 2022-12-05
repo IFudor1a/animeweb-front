@@ -4,6 +4,8 @@
   margin: 50px 0;
   flex-direction: column;
 
+}
+
   .AdminPageLabel {
     width: 100%;
     height: 100px;
@@ -19,10 +21,12 @@
       width: 15%;
       height: 50px;
       background-color: #EB5E55;
-      color: #FFFFFF;
-      font-weight: bold;
       padding: 12px 16px;
       cursor: pointer;
+      text-decoration: none;
+      color: #FFFFFF;
+      font-weight: bold;
+
 
       &:hover {
         background-color: #FF5154;
@@ -33,6 +37,8 @@
 
   .AdminProductForm {
     width: 100%;
+    margin: 50px 0;
+    min-height: 75vh;
 
 
     .AdminProductForm_Container {
@@ -56,6 +62,14 @@
           padding: 12px 24px;
           letter-spacing: 2px;
           font-weight: 600;
+        }
+        select {
+          padding: 6px 12px;
+          border: 1px solid #181f24;
+          letter-spacing: 2px;
+          cursor: pointer;
+          outline: none;
+          background-color: #FFFFFF;
         }
 
       }
@@ -96,4 +110,81 @@
       }
     }
   }
-}
+
+  .Brand, .Category, .Role {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 75vh;
+    gap: 15px;
+    margin: 50px 0;
+
+    label {
+      letter-spacing: 2px;
+      font-weight: 600;
+    }
+
+    input {
+      padding: 12px 24px;
+      letter-spacing: 2px;
+      font-weight: 600;
+      width: 26%;
+    }
+
+    button {
+      background-color: #FF5154;
+      padding: 12px 24px;
+      border: 1px solid #FF5154;
+      width: 25%;
+      color: #FFFFFF;
+      letter-spacing: 2px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.5s;
+
+      &:hover {
+        background-color: #EB5E55;
+      }
+    }
+  }
+
+  .Customer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 75vh;
+    gap: 15px;
+    margin: 50px 0;
+    .input_container {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      flex-direction: column;
+      label {
+        letter-spacing: 2px;
+        font-weight: 600;
+      }
+      input {
+        padding: 12px 24px;
+        letter-spacing: 2px;
+        font-weight: 600;
+        width: 26%;
+      }
+    }
+    button {
+      background-color: #FF5154;
+      padding: 12px 24px;
+      border: 1px solid #FF5154;
+      width: 25%;
+      color: #FFFFFF;
+      letter-spacing: 2px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.5s;
+
+      &:hover {
+        background-color: #EB5E55;
+      }
+    }
+  }

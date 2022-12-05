@@ -3,129 +3,54 @@ import '../Styles/ProductSlider.css';
 import {LeftArrow, RightArrow} from "../Materials/SVG/SVG";
 import {Link} from "react-router-dom";
 import Button from "./Button";
+import {useSelector} from "react-redux";
 
-const Products = [
-    {
-        id: 1,
-        category: 'Doraemon',
-        name: 'I AM DORAEMON WHITE TEE 1',
-        img: 'https://cdn.shopify.com/s/files/1/0070/1700/5113/products/TSM197NDMN_900x.png?v=1658955040'
-    },
-    {
-        id: 2,
-        category: 'Doraemon',
-        name: 'I AM DORAEMON WHITE TEE 2',
-        img: 'https://cdn.shopify.com/s/files/1/0070/1700/5113/products/TSM197NDMN_900x.png?v=1658955040'
-    },
-    {
-        id: 3,
-        category: 'Doraemon',
-        name: 'I AM DORAEMON WHITE TEE 3',
-        img: 'https://cdn.shopify.com/s/files/1/0070/1700/5113/products/TSM197NDMN_900x.png?v=1658955040'
-    },
-    {
-        id: 4,
-        category: 'Doraemon',
-        name: 'I AM DORAEMON WHITE TEE 4',
-        img: 'https://cdn.shopify.com/s/files/1/0070/1700/5113/products/TSM197NDMN_900x.png?v=1658955040'
-    },
-    {
-        id: 5,
-        category: 'Doraemon',
-        name: 'I AM DORAEMON WHITE TEE 5',
-        img: 'https://cdn.shopify.com/s/files/1/0070/1700/5113/products/TSM197NDMN_900x.png?v=1658955040'
-    },
-    {
-        id: 6,
-        category: 'Doraemon',
-        name: 'I AM DORAEMON WHITE TEE 6',
-        img: 'https://cdn.shopify.com/s/files/1/0070/1700/5113/products/TSM197NDMN_900x.png?v=1658955040'
-    },
-    {
-        id: 7,
-        category: 'Doraemon',
-        name: 'I AM DORAEMON WHITE TEE 7',
-        img: 'https://cdn.shopify.com/s/files/1/0070/1700/5113/products/TSM197NDMN_900x.png?v=1658955040'
-    },
-    {
-        id: 8,
-        category: 'Doraemon',
-        name: 'I AM DORAEMON WHITE TEE 8',
-        img: 'https://cdn.shopify.com/s/files/1/0070/1700/5113/products/TSM197NDMN_900x.png?v=1658955040'
-    },
-    {
-        id: 9,
-        category: 'Doraemon',
-        name: 'I AM DORAEMON WHITE TEE 9',
-        img: 'https://cdn.shopify.com/s/files/1/0070/1700/5113/products/TSM197NDMN_900x.png?v=1658955040'
-    },
-    {
-        id: 10,
-        category: 'Doraemon',
-        name: 'I AM DORAEMON WHITE TEE 10',
-        img: 'https://cdn.shopify.com/s/files/1/0070/1700/5113/products/TSM197NDMN_900x.png?v=1658955040'
-    },
-]
+
 
 const ProductSlider = ({title}) => {
+    const Products = useSelector(state => state.products)
     const [current, setCurrent] = useState(0);
-    const maxSlide = Products.length - 1;
-
-    const handleChange = () => {
-        let slides = document.querySelectorAll('.product');
-        [...slides].forEach((slide, id) => {
-            //console.log('Current',current)
-            //console.log('VALUE', id-current)
-            slide.style.transform = `translateX(${-100 * current}%)`
-        })
-    }
-
-    const handleClick = (direction) => {
-        if (direction === 'right') {
-            if (current >= maxSlide - 3) {
-                setCurrent(0)
-            } else {
-                setCurrent(current + 1)
-            }
-            handleChange();
-        } else {
-            if (current <= 0) {
-                setCurrent(maxSlide - 3)
-            } else {
-                setCurrent(current - 1)
-            }
-            handleChange();
-        }
-    }
+    const maxSlide = Object.values(Products).length
 
     useEffect(() => {
-        const delay = setTimeout(() => {
-            if (current >= maxSlide - 3) {
-                setCurrent(0)
-            } else {
-                setCurrent(current + 1)
-            }
-            handleChange();
-        }, 5000)
-        return () => {
-            clearTimeout(delay);
+        const products = document.querySelectorAll('.product')
+        for(let product of products) {
+            product.style.transform = `translateX(${-100 * current}%)`
         }
     }, [current])
+    const handleClick = (position) => {
+        if(position === 'left') {
+            if(current === 0) {
+                setCurrent(maxSlide - 1)
+            } else{
+            setCurrent(current <= 0 ? maxSlide - 1 : current - 1)}
+        } else {
+            if (current === maxSlide - 1) {
+                setCurrent(0)
+            } else {
+            setCurrent(current >= maxSlide - 1 ? 0: current + 1)}
+
+        }
+    }
+
+
+
+
 
     return (
         <div className='ProductSlider'>
             <h2 id='slider'>{title}</h2>
             <div className='Container'>
                 {
-                    Products.map(product => (
+                   Products && Object.values(Products).map(product => (
                         <div className='product'>
-                            <Link to={`products/${product.id}`}>
+                            <Link to={`products/${product._id}`}>
                                 <div className='picture'>
-                                    <img src={product.img} alt={product.name}/>
+                                    <img src={`http://localhost:5000/${product.product_images.split(' ')[0]}`} alt={product.name}/>
                                 </div>
                                 <div className='info'>
                                     <h3>{product.category}</h3>
-                                    <p>{product.name}</p>
+                                    <p>{product.product_name}</p>
                                 </div>
                             </Link>
                         </div>
@@ -139,6 +64,6 @@ const ProductSlider = ({title}) => {
             <Button link={'/products'} name={'VIEW ALL PRODUCTS'}/>
         </div>
     );
-};
+}
 
 export default ProductSlider;

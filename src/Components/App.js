@@ -3,7 +3,7 @@ import AppRouter from "../Route";
 import Header from "./Header";
 import Footer from "./Footer";
 import {useEffect} from "react";
-import {handleInitialData} from "../Actions/products";
+import {handleInitialData} from "../Actions/shared";
 import {useDispatch} from "react-redux";
 
 function App() {

@@ -1,6 +1,6 @@
-import {_getProducts} from "../utils/_DATA";
 import {checkSumFile, productFormer} from "../utils/utils";
-import {postProduct} from "../https/product-https";
+import {_getProducts, _postProduct} from "../https/product-https";
+import {handleInitialData} from "./shared";
 
 export const GET_PRODUCTS = 'GET_PRODUCTS';
 export const ADD_PRODUCT = 'ADD_PRODUCT';
@@ -44,27 +44,18 @@ export function AddToBasket(product) {
 }
 
 
-export function handleInitialData() {
-    return (dispatch) => {
-        return _getProducts()
-            .then(response => response.json())
-            .then(products => {
-                dispatch(receiveProducts(products))
-            }).catch(err => console.error('This is ', err))
-    }
-}
 
-export function checkValid(name, description, consists, price, photos) {
+export function checkValid(name, description, consists, price, photos, category, brand) {
     return (dispatch, getState) => {
         const {products} = getState()
         const validProducts = Object.values(products)
         const product = validProducts.filter(product => product.name === name)
         const fileValid = checkSumFile(photos)
-        console.log(name, description, consists, price, photos, fileValid)
-        const candidate = productFormer(name, description, consists, price, photos)
-
+        const candidate = productFormer(name, description, consists, price, photos, category, brand)
+        console.log(category)
+        console.log(brand)
         if (fileValid && product.length === 0) {
-            return postProduct(candidate)
+            return _postProduct(candidate)
                 .then(() => {
                     dispatch(handleInitialData()).then(res => {
                             console.log(res)
