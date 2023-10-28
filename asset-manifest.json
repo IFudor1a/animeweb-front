@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/animeweb-front/static/css/main.56ee84d0.css",
+    "main.js": "/animeweb-front/static/js/main.75935329.js",
+    "index.html": "/animeweb-front/index.html",
+    "main.56ee84d0.css.map": "/animeweb-front/static/css/main.56ee84d0.css.map",
+    "main.75935329.js.map": "/animeweb-front/static/js/main.75935329.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.56ee84d0.css",
+    "static/js/main.75935329.js"
+  ]
+}
